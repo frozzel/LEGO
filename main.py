@@ -17,11 +17,11 @@ def load_data(file_path):
         print(f"Error loading data: {e}")
         return None
     
-df = load_data('./data/colors.csv')
+color = load_data('./data/colors.csv')
 
 # print(df.head())  # Display the first few rows of the DataFrame
 
-unique_colors = df["name"].nunique()  # Get unique values in the DataFrame or count() for each column
+unique_colors = color["name"].nunique()  # Get unique values in the DataFrame or count() for each column
 # unique_colors = df.count()  # Alternatively, use count() to get the number of non-null values in each column
 
 
@@ -29,7 +29,25 @@ unique_colors = df["name"].nunique()  # Get unique values in the DataFrame or co
 print("Unique values in each column:")
 print(unique_colors)  # Print the unique values count for each column
 
-tran_colors = df.is_trans.value_counts()  # Get unique values in the "name" column
+tran_colors = color.is_trans.value_counts()  # Get unique values in the "name" column
 
 print("Total number of translucent colors:")
 print(tran_colors)  # Print the total number of colors
+
+sets =load_data('./data/sets.csv')  # Load the sets data
+
+print("Sets data loaded successfully.")
+# Display the first few rows of the sets DataFrame
+print(sets.head())
+
+oldest_set = sets.sort_values('year').head()  # Get the oldest set by year
+print("Oldest set(s):")
+print(oldest_set)  # Print the oldest set(s)
+
+sets_first_year = sets[sets['year']== 1949]  # Get the first year for each set
+print("Sets from the first year (1949):")
+print(sets_first_year)  # Print the sets from the first year
+
+largest_set = sets.sort_values('num_parts', ascending=False).head()  # Get the largest set by number of parts
+print("Largest set(s) by number of parts:")
+print(largest_set)  # Print the largest set(s)

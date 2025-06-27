@@ -35,3 +35,7 @@ Walk into a LEGO store and you will see their products organised by theme. Their
 <div>
 <a href=""><img src="https://github.com/frozzel/LEGO/blob/180e5c9b7c5370901c6c15ee046e7f31cdb08ebd/assets/lego_sets.png" align="center" height="" width="100%" ></a>
 </div>
+
+<div>
+<a href=""><img src="https://github.com/frozzel/LEGO/blob/50dd45cc1b1510812f1fd5808c90091e325d511d/assets/rebrickable_schema.png" align="center" height="" width="100%" ></a>
+</div>
